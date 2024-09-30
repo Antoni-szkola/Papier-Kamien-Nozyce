@@ -1,6 +1,7 @@
 
 body {
     background-color: lightblue;
+    width: 100%;
 }
 /* To center everything in game */
 
@@ -27,6 +28,11 @@ img {
     font-weight: bold;
 }
 
+.result {
+    font-weight: bold;
+
+}
+
 .move, .result {
     text-align: center;
 
@@ -41,4 +47,6 @@ img {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    background: rgba(255, 0, 0, 0.4);
+
 }

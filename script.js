@@ -1,3 +1,12 @@
+const setNormalBackground = () => {
+    document.body.style.backgroundImage = "url('img/tlo.png')"
+    document.body.style.backgroundRepeat = "no-repeat"
+}
+
+const setBackgroundObama = () => {
+    document.body.style.backgroundImage = "url('img/obama-prism.gif')"
+    document.body.style.backgroundRepeat = "repeat"
+}
 
 const playGame = () => {
     const rockBtn = document.querySelector('.kamień');
@@ -13,6 +22,12 @@ const playGame = () => {
             const computerChoice = computerOptions[choiceNumber];
 
             winner(this.className, computerChoice)
+
+            setBackgroundObama()
+            
+            setTimeout(() => {
+                setNormalBackground()
+            }, 1500)
         })
     })
 
@@ -51,4 +66,5 @@ const winner = (player, computer) => {
     
 }
 
+setNormalBackground()
 playGame();
