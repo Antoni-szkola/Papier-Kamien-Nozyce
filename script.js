@@ -1,8 +1,4 @@
 
-document.querySelector(".reload").addEventListener("click", () => {
-    document.location.reload();
-})
-
 const playGame = () => {
     const rockBtn = document.querySelector('.kamień');
     const paperBtn = document.querySelector('.papier');

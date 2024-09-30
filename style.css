@@ -27,19 +27,18 @@ img {
     font-weight: bold;
 }
 
-/* Reload button style */
-.reload {
-    display: none;
-    margin-top: 2rem;
-    padding: 1rem;
-    background: green;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.move, .result {
+    text-align: center;
+
 }
 
 .result{
     margin-top: 20px;
     font-size: 1.2rem;
+}
+
+.game {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
