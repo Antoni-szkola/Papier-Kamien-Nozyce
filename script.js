@@ -1,15 +1,14 @@
 
-// Reload button
 document.querySelector(".reload").addEventListener("click", () => {
     document.location.reload();
 })
 
 const playGame = () => {
-    const rockBtn = document.querySelector('.rock');
-    const paperBtn = document.querySelector('.paper');
-    const scissorBtn = document.querySelector('.scissor');
+    const rockBtn = document.querySelector('.kamień');
+    const paperBtn = document.querySelector('.papier');
+    const scissorBtn = document.querySelector('.nożyce');
     const playerOptions = [rockBtn, paperBtn, scissorBtn];
-    const computerOptions = ['rock', 'paper', 'scissors']
+    const computerOptions = ['kamień', 'papier', 'nożyce']
 
     playerOptions.forEach(option => {
         option.addEventListener('click', function () {
@@ -17,7 +16,7 @@ const playGame = () => {
             const choiceNumber = Math.floor(Math.random() * 3);
             const computerChoice = computerOptions[choiceNumber];
 
-            winner(this.innerText, computerChoice)
+            winner(this.className, computerChoice)
         })
     })
 
@@ -27,44 +26,33 @@ const winner = (player, computer) => {
     const result = document.querySelector('.result');
     player = player.toLowerCase();
     computer = computer.toLowerCase();
+    result.textContent = `Komputer wybrał ${computer}, a gracz ${player}. `
     if (player === computer) {
-        result.textContent = 'Tie'
+        result.textContent += 'Remis'
     }
-    else if (player == 'rock') {
-        if (computer == 'paper') {
-            result.textContent = 'Computer Won';
-            computerScore++;
-            computerScoreBoard.textContent = computerScore;
+    else if (player == 'kamień') {
+        if (computer == 'papier') {
+            result.textContent += 'Komputer wygrał';
 
         } else {
-            result.textContent = 'Player Won'
-            playerScore++;
-            playerScoreBoard.textContent = playerScore;
+            result.textContent += 'Gracz wygrał'
         }
     }
-    else if (player == 'scissors') {
-        if (computer == 'rock') {
-            result.textContent = 'Computer Won';
-            computerScore++;
-            computerScoreBoard.textContent = computerScore;
+    else if (player == 'nożyce') {
+        if (computer == 'kamień') {
+            result.textContent += 'Komputer wygrał';
         } else {
-            result.textContent = 'Player Won';
-            playerScore++;
-            playerScoreBoard.textContent = playerScore;
+            result.textContent += 'Gracz wygrał';
         }
     }
-    else if (player == 'paper') {
-        if (computer == 'scissors') {
-            result.textContent = 'Computer Won';
-            computerScore++;
-            computerScoreBoard.textContent = computerScore;
+    else if (player == 'papier') {
+        if (computer == 'nożyce') {
+            result.textContent += 'Komputer wygrał';
         } else {
-            result.textContent = 'Player Won';
-            playerScore++;
-            playerScoreBoard.textContent = playerScore;
+            result.textContent += 'Gracz wygrał';
         }
     }
+    
 }
 
-// Calling playGame function inside game
 playGame();

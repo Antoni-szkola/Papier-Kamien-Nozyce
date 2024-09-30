@@ -1,39 +1,10 @@
-/* styles.css */
-/* universal selector - Applies to whole document */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: #082c6c;
-    color: #fff;
+
+body {
+    background-color: lightblue;
 }
 /* To center everything in game */
-.game{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Score Board */
-.score{
-    display: flex;
-    width: 30vw;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 70px;
-    z-index: 1;
-}
 
-/* Score  */
-.p-count,.c-count{
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-
-/* displaying three buttons in one line */
 .options{
     display: flex;
     width: 50vw;
@@ -41,16 +12,14 @@
     margin-top: 2rem;
 }
 
-/* Styling on all three buttons */
-.rock, .paper, .scissor{
-    padding: 0.8rem;
-    width: 100px;
-    border-radius: 10px;
-    background: green;
+.kamień, .papier, .nożyce {
     outline: none;
-    border-color: green;
     border: none;
     cursor: pointer;
+}
+
+img {
+    width: 100px;
 }
 
 .move{
